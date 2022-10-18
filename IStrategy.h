@@ -10,10 +10,6 @@ typedef struct
 
 IStrategy *New_IStrategy();
 
-void Contructor_IStrategy(IStrategy*);
-
-void Destructor_IStrategy( IStrategy *);
-
 char* Funcion(IStrategy *);
 
 #endif 
