@@ -5,25 +5,17 @@
 
 void __Algorithm_A(void * name)
 {
-    printf("Context: Sorting data using the strategy (not sure how it'll do it)");
+    printf("Context: Sorting data using the strategy (not sure how it'll do it)\n");
     char *result = malloc(sizeof(char[20]));
-    strcpy(result,(char*)name);
+    strcpy(result,(char *)name);
     printf("%s", result);
+    printf("\n");
     free(result);
 }
 
 ConcreteStrategyA *New_ConcreteStrategyA()
 {
-    return (ConcreteStrategyA*)malloc (sizeof(ConcreteStrategyA));
-}
-
-void Contructor_ConcreteStrategyA(ConcreteStrategyA *this)
-{
-    Contructor_IStrategy((IStrategy*)this);
-    this->StratA.Al = __Algorithm_A;
-}
-
-void Destructor_ConcreteStrategyA(ConcreteStrategyA*this)
-{
-    Destructor_IStrategy((IStrategy*)this);
+    ConcreteStrategyA *A = (ConcreteStrategyA*)malloc (sizeof(ConcreteStrategyA));
+    A->StratA.Al = __Algorithm_A;
+    return A;
 }
