@@ -12,9 +12,5 @@ typedef struct
 
 ConcreteStrategyA* New_ConcreteStrategyA();
 
-void Contructor_ConcreteStrategyA(ConcreteStrategyA *);
-
-void Destructor_ConcreteStrategyA(ConcreteStrategyA*);
-
 
 #endif
