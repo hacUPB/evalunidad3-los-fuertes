@@ -9,21 +9,18 @@
 int main (void)
 {
     IStrategy* Master = New_IStrategy();
-    Contructor_IStrategy(Master);
 
     ConcreteStrategyA* stratA = New_ConcreteStrategyA();
-    Contructor_ConcreteStrategyA(stratA);
 
     ConcreteStrategyB* stratB = New_ConcreteStrategyB();
-    Contructor_ConcreteStrategyB(stratB);
 
     Context *Master_Context = New_Context();
     Contructor_Context(Master_Context,stratA);
 
-    printf("Client: Strategy is set to normal sorting.");
+    printf("Client: Strategy is set to normal sorting.\n");
     Dosomething(Master_Context);
     printf(" ");
-    printf("Client: Strategy is set to reverse sorting.");
+    printf("Client: Strategy is set to reverse sorting.\n");
     SetStrat(Master_Context,stratB);
     Dosomething(Master_Context);
 
